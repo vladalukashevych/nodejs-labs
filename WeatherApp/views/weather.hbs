@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Weather page</title>
+</head>
+<body>
+<header>
+    <a href="/" class="title">WeatherInfo</a>
+    <a href="/" class="item">Home</a>
+    <a href="/weather" class="item">Weather</a>
+</header>
+
+<div class="weather">
+    <div class="cities">
+        <table class="cities-table">
+            <tr>
+                <td><a href="/weather?city=Prague">Prague</a></td>
+            </tr>
+            <tr>
+                <td><a href="/weather?city=Berlin">Berlin</a></td>
+            </tr>
+            <tr>
+                <td><a href="/weather?city=Zhytomyr">Zhytomyr</a></td>
+            </tr>
+            <tr>
+                <td><a href="/weather?city=Liberec">Liberec</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="border padding">
+        <p class="city-header">Weather in city {{weather.city}}</p>
+        <div class="content-center">
+            <img class="weather-icon" src="{{weather.icon}}">
+            <table class="weather-table">
+                <tr>
+                    <td>Pressure</td>
+                    <td>{{weather.pressure}}</td>
+                </tr>
+                <tr>
+                    <td>Humidity</td>
+                    <td>{{weather.humidity}}</td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td>{{weather.temperature}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+<script>
+    const cities = document.querySelectorAll(".cities a");
+    for (let city of cities) {
+        if (city.classList.contains('active'))
+            city.classList.remove('active');
+        if (city.textContent == '{{weather.city}}')
+            city.classList.add('active');
+    }
+</script>

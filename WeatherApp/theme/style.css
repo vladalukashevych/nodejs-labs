@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    margin: 0 10rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+header .title {
+    font-size: 30px;
+}
+
+header .item {
+    color: grey;
+    font-size: 20px;
+}
+
+.border {
+    border: 2px solid #eeeeee;
+    border-radius: 5px;
+}
+
+.padding {
+    padding: 30px;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    padding: 10px;
+    background-color: #3897ff;
+    border: 2px solid #71b6ff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.weather {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.weather-table td {
+    padding: 15px;
+    border: 2px solid #eeeeee;
+}
+
+.city-header {
+    font-size: 25px;
+}
+
+.weather-icon {
+    width: 100px;
+}
+
+.cities a {
+    display: block;
+    padding: 15px;
+    transition: background-color 0.6s;
+}
+
+.cities a:hover {
+    background-color: #f8f8f8;
+}
+
+.cities a.active {
+    background-color: #3897ff;
+    color: #fff;
+}
+
+.cities a.active:hover {
+    background-color: #5aa9ff;
+}
+
+.cities-table tr {
+    border-bottom: 2px solid #eeeeee;
+    overflow: hidden;
+    padding: 200px;
+}
+
+
